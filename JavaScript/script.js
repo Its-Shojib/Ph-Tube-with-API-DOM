@@ -34,7 +34,6 @@ let tabLoad = async (categoryId) => {
         drawingContainer.appendChild(div);
 
     }
-    // <span class="text-xs bg-black text-white">${hour} Hours ${minutes} Minutes Ago</span>
     else {
         items.forEach((item) => {
             let timeInSec = parseInt(item.others?.posted_date);
