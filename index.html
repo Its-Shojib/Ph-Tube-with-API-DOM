@@ -22,27 +22,34 @@
 
     <!-- Internal CSS -->
     <style>
-        .inter{
+        .inter {
             font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
 
 <body class="inter">
-    <header class="max-w-screen-xl mx-auto px-4 py-8 md:px-6 lg:px-8">
-     <nav class="space-y-8">
-        <div class="flex justify-between items-center gap-40">
-            <img src="./Asset/Logo.png" alt="">
-            <button class="bg-gray-300 text-lg px-3 py-2 rounded-lg">Sort by view</button>
-            <button class="bg-red-500 text-white text-lg px-5 py-2 rounded-xl">Blog</button>
-        </div>
-        <hr>
-     </nav>
+    <header class="max-w-screen-xl mx-auto px-4 pt-8 md:px-6 lg:px-8">
+        <nav class="space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-5">
+                <img src="./Asset/Logo.png" alt="logo">
+                <button class="bg-gray-300 text-lg px-3 py-2 rounded-lg">Sort by view</button>
+                <button class="bg-red-500 text-white text-lg px-5 py-2 rounded-xl">Blog</button>
+            </div>
+            <hr>
+        </nav>
     </header>
-    <main class="max-w-screen-xl mx-auto px-4 py-5 md:px-6 lg:px-8">
-        <div id="tab-container">
-
-        </div>
+    <main class="max-w-screen-xl mx-auto px-4 md:px-6 lg:px-8">
+        <!-- Tab Section -->
+        <section>
+            <div class="tab-container w-full">
+                <div
+                  class="tabs tabs p-5 m-auto text-center flex justify-center"
+                  id="tab-container">
+                  <!-- <a class="tab">Tab 1</a> -->
+                </div>
+              </div>
+        </section>
     </main>
     <footer></footer>
 
