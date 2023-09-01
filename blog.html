@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="shortcut icon" href="./Asset/ph.png" type="image/x-icon">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind and DaisyUi-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Internal CSS -->
+    <style>
+        .inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="inter">
+    <header class="max-w-screen-xl mx-auto px-4 pt-8 md:px-6 lg:px-8 bg-stone-200">
+        <h1 class="text-4xl font-bold text-center text-blue-600">PHero Blogs</h1>
+    </header>
+    <main class="max-w-screen-xl mx-auto px-4 pt-8 md:px-6 lg:px-8 bg-stone-200">
+        <div class="space-y-10">
+            <div>
+                <h1 class="text-2xl font-bold">1.Discuss the scope of var, let, and const</h1>
+                <p>There are three keywords in JavaScript that can be used to declare variables: let, var, and const.
+                    Each keyword has different rules and implications for how the variables they create can be used.
+                    <br>
+                    <img class="h-[500px] w-full md:w-10/12 lg:w-8/12 px-2" src="./Asset/letVarConst.jpg" alt="">
+                    <br>
+
+                    <b>1. let</b>: The let keyword declares a block-scoped local variable, optionally initializing it to
+                    a
+                    value.
+                    Block-scoped means that the variable is only available within the block it was declared in, which is
+                    usually denoted by curly braces {}. <br>
+                    Examples:
+                <p class="bg-black text-white pl-10">
+                    function add(){ <br>
+                    let a = 5; <br>
+                    let b =2; <br>
+                    let result =a+b; <br>
+                    return result;<br>
+                    } <br>
+                    consol.log(b);&nbsp;&nbsp;&nbsp; &nbsp;// Create a error
+                </p>
+                <br>
+                <b>2. var</b>: The var keyword declares a function-scoped or global variable, optionally initializing it
+                to a
+                value.
+                Function-scoped means that the variable is only available within the function it was declared in.
+                Global variables are available throughout your entire code. <br>
+                Examples:
+                <p class="bg-black text-white pl-10">
+                    {<br>
+                    var x = 5; <br>
+                    var y = 6; <br>
+                    var z = x + y; <br>
+                    } <br>
+                    consol.log(z);&nbsp;&nbsp;&nbsp; &nbsp;// 11
+                </p><br>
+
+                <b>3. const</b>: The const keyword declares a block-scoped, immutable constant variable, i.e. a variable
+                that
+                can’t be reassigned.
+                Constants are also called “immutable variables”, but that’s a bit of a misnomer since they are
+                actually variables – just ones that can’t be reassigned.
+                Examples:
+                <p class="bg-black text-white pl-10">
+                    const y = 6; <br>
+                    y = 10; &nbsp;&nbsp;&nbsp; &nbsp;// Create a error<br>
+                </p><br>
+                </p>
+            </div>
+            <div>
+                <h1 class="text-2xl font-bold">2.Tell us the use cases of null and undefined</h1> <br>
+                <p><b class="text-xl underline italic">Use Cases for Undefined</b>: <br>
+
+                    <b>Variable Initialization</b>: When you declare a variable without assigning an initial value, it
+                    is automatically initialized to "undefined." This is common when you plan to assign a value later in
+                    the program. <br>
+
+                    <b>Function Parameters</b>: If a function is called with fewer arguments than it expects, the
+                    missing parameters are automatically set to "undefined." This allows you to handle cases where
+                    optional arguments are omitted. <br>
+
+                    <b>Missing Object Properties</b>: When you try to access a property that doesn't exist on an object,
+                    the result is "undefined." This can be useful for checking whether a property exists before using
+                    it. <br>
+
+                    <b>Implicit Returns</b>: If a function doesn't explicitly return a value, it implicitly returns
+                    "undefined." This can occur if you forget to include a return statement in your function. <br>
+
+                    <b>Scope</b>: Variables declared in a scope but not assigned a value before use will hold the value
+                    "undefined." This can help you identify variables that need proper initialization.
+                </p> <br>
+                <img class="h-[400px] w-full md:w-10/12 lg:w-8/12 px-2" src="./Asset/nullvsundefine.jpg" alt="">
+                <br>
+                <p><b class="text-xl underline italic">Use Cases for Null</b>: <br>
+
+                    <b>Explicit Absence</b>: You can assign the value "null" to indicate that a variable or property
+                    intentionally has no value. This is often used when you want to explicitly indicate the absence of
+                    data. <br>
+
+                    <b>Memory Management</b>: In languages with garbage collection, setting a reference to "null" can
+                    help release memory associated with an object that is no longer needed. This can prevent memory
+                    leaks and improve performance. <br>
+
+                    <b>Checking for Validity</b>: You might use "null" to indicate that a value is not available or
+                    valid. For example, a function that searches for an element in a collection might return "null" if
+                    the element is not found. <br>
+
+                    <b>Interacting with APIs</b>: Some APIs or functions might return "null" to indicate errors or
+                    absence of data. This can help your code handle different scenarios gracefully. <br>
+
+                    <b>Conditional Logic</b>: You can use "null" in conditional statements to check whether a value
+                    exists or not. This can be particularly helpful for input validation.
+                </p> <br>
+            </div>
+            <div>
+                <h1 class="text-2xl font-bold">3.What do you mean by REST API?</h1>
+                <p> A REST API is an API that conforms to the design principles of the REST, or representational state
+                    transfer architectural style. <br><br>
+
+                    To make the API service RESTful, six guiding constraints must be satisfied: <br>
+
+                    <b>Use of a uniform interface (UI)</b>: To have a uniform interface, multiple architectural constraints are
+                    required to guide the behavior of components. Additionally, resources should be unique so they are
+                    identifiable through a single URL. <br>
+                    <b>Client-server based</b>: The uniform interface separates user concerns from data storage concerns. The
+                    client’s domain concerns UI and request-gathering, while the server’s domain concerns focus on data
+                    access, workload management, and security. The separation of client and server enables each to be
+                    developed and enhanced independently of the other. <br>
+                    <b>Stateless operations</b>: Request from client to server must contain all of the information necessary so
+                    that the server can understand and process it accordingly. The server can’t hold any information
+                    about the client state. <br>
+                    <b>RESTful resource caching</b>: Data within a response to a request must be labeled as cacheable or
+                    non-cacheable. <br>
+                    <b>Layered system</b>: REST allows for an architecture composed of hierarchical layers. In doing so, each
+                    component cannot see beyond the immediate layer with which they are interacting. <br>
+                    <b>Code on demand</b>: Because REST APIs download and execute code in the form of applets or scripts,
+                    there’s more client functionality. Oftentimes, a server will send back a static representation of
+                    resources in the form of XML or JSON. Servers can also send executable codes to the client when
+                    necessary. <br>
+                </p>
+                <img class="h-[500px] w-full md:w-10/12 lg:w-8/12 px-2" src="./Asset/Rest.jpg" alt="">
+                <br>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

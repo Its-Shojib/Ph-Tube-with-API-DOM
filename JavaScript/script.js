@@ -78,3 +78,8 @@ function setData(items) {
 
 handleCategory();
 tabLoad("1000");
+
+/* Blog section */
+document.getElementById("blog").addEventListener("click", function(){
+    window.open('blog.html', '_blank');
+})
