@@ -1,3 +1,4 @@
+/* Load Data and Create Tab*/
 let handleCategory = async () => {
     let response = await fetch(
         "https://openapi.programming-hero.com/api/videos/categories"
@@ -13,8 +14,7 @@ let handleCategory = async () => {
         tabContainer.appendChild(div);
     });
 };
-
-
+/* Load Tab and Sort data*/
 let tabLoad = async (categoryId) => {
     let response = await fetch(
         `https://openapi.programming-hero.com/api/videos/category/${categoryId}`
@@ -22,7 +22,7 @@ let tabLoad = async (categoryId) => {
     let data = await response.json();
     let items = data.data;
     document.getElementById("sort-btn").addEventListener("click", function () {
-        setData(items.sort(byViews));
+        setData(items.sort(byViews)); //sort and set data
         function byViews(a, b) {
             return parseInt(b.others.views) - parseInt(a.others.views)
         }
@@ -30,7 +30,7 @@ let tabLoad = async (categoryId) => {
     setData(items)
 }
 
-// Set the data to container
+/* Set the data to container normal and sorted*/ 
 function setData(items) {
     let cardContainer = document.getElementById("card-container");
     let drawingContainer = document.getElementById("drawing-container");
@@ -65,7 +65,7 @@ function setData(items) {
                     <img src="${item.authors['0']?.profile_picture}" class="rounded-2xl w-10 h-10">
                     <div>
                         <h2 class="font-bold h-10">${item.title}</h2>
-                        <span class="text-sm text-gray-400">${item.authors['0']?.profile_name} ${item.authors['0']?.verified ? "<img class='inline' src='./JavaScript/fi_10629607.svg'>" : ""}</span>
+                        <span class="text-sm text-gray-400">${item.authors['0']?.profile_name} ${item.authors['0']?.verified ? "<img class='inline' src='./Asset/fi_10629607.svg'>" : ""}</span>
                         <br>
                         <p><span id="view-count">${item.others.views}</span> views</p>
                     </div>
@@ -77,9 +77,11 @@ function setData(items) {
 }
 
 handleCategory();
-tabLoad("1000");
+tabLoad("1000"); // Call Current ALL tab
 
 /* Blog section */
 document.getElementById("blog").addEventListener("click", function(){
     window.open('blog.html', '_blank');
 })
+
+/* ***************Happy Codding**************** */
